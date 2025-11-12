@@ -4,10 +4,8 @@ import { useLanguage } from "../hooks/useLanguage";
 export default function About() {
   const { t } = useLanguage();
 
-  // URLs de badges (puedes moverlas a data/badges.ts si prefieres)
   const htbBadgeImg = "https://www.hackthebox.com/badge/image/20709";
-  const thmIframeSrc =
-    "https://tryhackme.com/api/v2/badges/public-profile?userPublicId=12709";
+  const thmBadgeImg = "https://tryhackme-badges.s3.amazonaws.com/Incuerd0.png";
 
   return (
     <section id="about" className="py-20 bg-neutral-950 text-gray-200">
@@ -49,7 +47,7 @@ export default function About() {
           </p>
         </motion.div>
 
-        {/* Badges / Verifications */}
+        {/* Badges / Verificaciones */}
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -64,9 +62,9 @@ export default function About() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            {/* HackTheBox badge (imagen) */}
+            {/* HackTheBox badge */}
             <a
-              href="https://www.hackthebox.com"
+              href="https://app.hackthebox.com/profile/20709"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block"
@@ -74,21 +72,25 @@ export default function About() {
               <img
                 src={htbBadgeImg}
                 alt="HackTheBox badge"
-                className="w-44 h-auto object-contain rounded-md border border-neutral-800 bg-neutral-900 p-2"
+                className="w-64 object-contain rounded-md border border-neutral-800 bg-neutral-900 p-1.5"
                 loading="lazy"
               />
             </a>
 
-            {/* TryHackMe badge (iframe embebido) */}
-            <div className="w-64 h-20 sm:w-72 sm:h-20 rounded-md overflow-hidden border border-neutral-800 bg-neutral-900">
-              <iframe
-                title="TryHackMe badges"
-                src={thmIframeSrc}
-                style={{ border: "none" }}
-                sandbox="allow-same-origin allow-scripts allow-popups"
-                className="w-full h-full"
+            {/* TryHackMe badge */}
+            <a
+              href="https://tryhackme.com/p/Incuerd0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+              aria-label="TryHackMe profile">
+              <img
+                src={thmBadgeImg}
+                alt="TryHackMe badge"
+                className="w-60 object-contain rounded-md border border-neutral-800 bg-neutral-900 p-1.5"
+                loading="lazy"
               />
-            </div>
+            </a>
           </div>
 
           <p className="text-xs text-neutral-500 mt-4">
