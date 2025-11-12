@@ -1,9 +1,15 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { socialLinks } from "../data/socials";
 import { useLanguage } from "../hooks/useLanguage";
 
 export default function Contact() {
   const { t } = useLanguage();
+  const [showEmail, setShowEmail] = useState(false);
+
+  const username = "lfgc851";
+  const domain = "gmail.com";
+  const email = `${username}@${domain}`;
 
   return (
     <section id="contact" className="py-20 bg-neutral-900 text-gray-100">
@@ -38,6 +44,27 @@ export default function Contact() {
             </motion.a>
           ))}
         </div>
+
+        <div className="mt-10">
+          {!showEmail ? (
+            <motion.button
+              onClick={() => setShowEmail(true)}
+              whileHover={{ scale: 1.05 }}
+              className="text-indigo-400 hover:text-indigo-300 transition-colors underline">
+              {t("contact.showEmail")}
+            </motion.button>
+          ) : (
+            <motion.a
+              href={`mailto:${email}`}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="text-indigo-400 hover:text-indigo-300 transition-colors">
+              {email}
+            </motion.a>
+          )}
+        </div>
+
+        <p className="text-xs text-neutral-500 mt-6">{t("contact.note")}</p>
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 export const socialLinks = [
   {
@@ -10,10 +10,5 @@ export const socialLinks = [
     name: "LinkedIn",
     url: "https://linkedin.com/in/tu-usuario",
     icon: Linkedin,
-  },
-  {
-    name: "Correo",
-    url: "mailto:tu.correo@ejemplo.com",
-    icon: Mail,
   },
 ];

@@ -54,6 +54,9 @@ type TranslationKey =
   | "contact.title"
   | "contact.subtitle"
   | "contact.description"
+  | "contact.showEmail"
+  | "contact.note"
+  | "skills.title"
   | "skills.languages"
   | "skills.frontend"
   | "skills.backend"
@@ -139,8 +142,11 @@ const esTranslations: Translations = {
   "contact.subtitle": "Hablemos sobre tu próximo proyecto",
   "contact.description":
     "Si te interesa colaborar, discutir ideas o simplemente intercambiar conocimiento sobre desarrollo, seguridad o filosofía, puedes contactarme a través de mis redes o correo.",
-
+  "contact.showEmail": "Mostrar correo",
+  "contact.note":
+    "Tu información se mantiene privada. El correo se muestra solo bajo interacción para evitar scrapers automatizados.",
   // Skills Categories
+  "skills.title": "Habilidades",
   "skills.languages": "Lenguajes",
   "skills.frontend": "Frameworks & Frontend",
   "skills.backend": "Backend & APIs",
@@ -228,8 +234,12 @@ const enTranslations: Translations = {
   "contact.subtitle": "Let's talk about your next project",
   "contact.description":
     "If you're interested in collaborating, discussing ideas or simply exchanging knowledge about development, security or philosophy, you can contact me through my social media or email.",
+  "contact.showEmail": "Show email",
+  "contact.note":
+    "Your information is protected. Email only shows after the interaction to avoid automated web scrappers.",
 
   // Skills Categories
+  "skills.title": "Skills",
   "skills.languages": "Languages",
   "skills.frontend": "Frameworks & Frontend",
   "skills.backend": "Backend & APIs",
