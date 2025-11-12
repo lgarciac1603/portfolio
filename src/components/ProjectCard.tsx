@@ -34,7 +34,7 @@ export default function ProjectCard({
         target="_blank"
         rel="noopener noreferrer"
         className="text-indigo-400 text-sm hover:underline">
-        {t('projects.viewGithub')}
+        {t("projects.viewGithub")}
       </a>
     </div>
   );

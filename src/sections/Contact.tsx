@@ -13,7 +13,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold mb-8">
-          {t('contact.title')}
+          {t("contact.title")}
         </motion.h2>
 
         <motion.p
@@ -21,7 +21,7 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
           className="text-lg max-w-2xl mx-auto mb-10 text-gray-400">
-          {t('contact.description')}
+          {t("contact.description")}
         </motion.p>
 
         <div className="flex justify-center gap-8 mt-8">

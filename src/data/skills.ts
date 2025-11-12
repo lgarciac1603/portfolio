@@ -34,7 +34,10 @@ export const skills = [
       { name: "Azure", levelKey: "level.intermediate" },
       { name: "AWS", levelKey: "level.basic" },
       { name: "Docker", levelKey: "level.intermediate" },
-      { name: "CI/CD (GitHub Actions, Pipelines)", levelKey: "level.intermediate" },
+      {
+        name: "CI/CD (GitHub Actions, Pipelines)",
+        levelKey: "level.intermediate",
+      },
     ],
   },
   {
@@ -65,10 +68,10 @@ export const skills = [
         nameEn: "AI applied to cybersecurity",
         levelKey: "level.currentStudy",
       },
-      { 
-        name: "Criptografía moderna", 
+      {
+        name: "Criptografía moderna",
         nameEn: "Modern cryptography",
-        levelKey: "level.currentStudy" 
+        levelKey: "level.currentStudy",
       },
       {
         name: "Simulaciones físicas / matemáticas en C++",

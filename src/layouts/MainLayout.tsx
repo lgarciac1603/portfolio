@@ -13,7 +13,7 @@ export default function MainLayout({ children }: Props) {
       <Navbar />
       <main className="flex-grow pt-20">{children}</main>
       <footer className="text-center py-6 text-neutral-500 text-sm border-t border-neutral-800">
-        © {new Date().getFullYear()} Fernando — {t('footer.rights')}
+        © {new Date().getFullYear()} Fernando — {t("footer.rights")}
       </footer>
     </div>
   );

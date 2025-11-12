@@ -18,13 +18,13 @@ export default function Navbar() {
         <div className="flex items-center space-x-6">
           <div className="space-x-6 text-sm text-neutral-300">
             <a href="#about" className="hover:text-white transition-colors">
-              {t('nav.about')}
+              {t("nav.about")}
             </a>
             <a href="#projects" className="hover:text-white transition-colors">
-              {t('nav.projects')}
+              {t("nav.projects")}
             </a>
             <a href="#contact" className="hover:text-white transition-colors">
-              {t('nav.contact')}
+              {t("nav.contact")}
             </a>
           </div>
           <LanguageToggle />

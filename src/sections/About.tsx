@@ -4,6 +4,11 @@ import { useLanguage } from "../hooks/useLanguage";
 export default function About() {
   const { t } = useLanguage();
 
+  // URLs de badges (puedes moverlas a data/badges.ts si prefieres)
+  const htbBadgeImg = "https://www.hackthebox.com/badge/image/20709";
+  const thmIframeSrc =
+    "https://tryhackme.com/api/v2/badges/public-profile?userPublicId=12709";
+
   return (
     <section id="about" className="py-20 bg-neutral-950 text-gray-200">
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
@@ -12,7 +17,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold mb-8 text-center text-gray-100">
-          {t('about.title')}
+          {t("about.title")}
         </motion.h2>
 
         <motion.div
@@ -21,27 +26,74 @@ export default function About() {
           transition={{ delay: 0.3, duration: 0.7 }}
           className="max-w-3xl mx-auto text-lg leading-relaxed text-center text-gray-400">
           <p className="mb-6">
-            {t('about.intro')}{" "}
-            <strong>
-              {t('about.specialties')}
-            </strong>
-            {t('about.principles')}{" "}
-            <strong>{t('about.values')}</strong> y la{" "}
-            <strong>{t('about.scalability')}</strong> {t('about.fundamentals')}
+            {t("about.intro")} <strong>{t("about.specialties")}</strong>
+            {t("about.principles")} <strong>{t("about.values")}</strong>{" "}
+            <strong>{t("about.scalability")}</strong> {t("about.fundamentals")}
           </p>
+
           <p className="mb-6">
-            {t('about.experience')}{" "}
-            <strong>{t('about.technologies')}</strong>{t('about.practices')} <strong>{t('about.devsecops')}</strong> {t('about.architecture')}
+            {t("about.experience")} <strong>{t("about.technologies")}</strong>
+            {t("about.practices")} <strong>{t("about.devsecops")}</strong>{" "}
+            {t("about.architecture")}
           </p>
+
           <p className="mb-6">
-            {t('about.mindset')} <strong>{t('about.analytical')}</strong> {t('about.security')} <strong>{t('about.creativity')}</strong> {t('about.development')}
+            {t("about.mindset")} <strong>{t("about.analytical")}</strong>{" "}
+            {t("about.security")} <strong>{t("about.creativity")}</strong>{" "}
+            {t("about.development")}
           </p>
-          <p>
-            {t('about.current')}{" "}
-            <strong>
-              {t('about.expanding')}
-            </strong>
-            {t('about.applying')}
+
+          <p className="mb-6">
+            {t("about.current")} <strong>{t("about.expanding")}</strong>
+            {t("about.applying")}
+          </p>
+        </motion.div>
+
+        {/* Badges / Verifications */}
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="mt-12 max-w-4xl mx-auto text-center">
+          <h3 className="text-xl font-semibold text-gray-100 mb-4">
+            {t("about.badgesTitle") ?? "Verificaciones y badges"}
+          </h3>
+          <p className="text-sm text-gray-400 mb-6">
+            {t("about.badgesDescription") ??
+              "Reconocimientos públicos en plataformas de ciberseguridad."}
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+            {/* HackTheBox badge (imagen) */}
+            <a
+              href="https://www.hackthebox.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+              aria-label="HackTheBox profile">
+              <img
+                src={htbBadgeImg}
+                alt="HackTheBox badge"
+                className="w-44 h-auto object-contain rounded-md border border-neutral-800 bg-neutral-900 p-2"
+                loading="lazy"
+              />
+            </a>
+
+            {/* TryHackMe badge (iframe embebido) */}
+            <div className="w-64 h-20 sm:w-72 sm:h-20 rounded-md overflow-hidden border border-neutral-800 bg-neutral-900">
+              <iframe
+                title="TryHackMe badges"
+                src={thmIframeSrc}
+                style={{ border: "none" }}
+                sandbox="allow-same-origin allow-scripts allow-popups"
+                className="w-full h-full"
+              />
+            </div>
+          </div>
+
+          <p className="text-xs text-neutral-500 mt-4">
+            {t("about.badgesNote") ??
+              "Los badges son públicos y se usan aquí como muestra de actividad en plataformas de CTF y aprendizaje."}
           </p>
         </motion.div>
       </div>
