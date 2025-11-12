@@ -1,3 +1,4 @@
+import { LanguageProvider } from "./hooks/useLanguage";
 import MainLayout from "./layouts/MainLayout";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
@@ -6,11 +7,13 @@ import Contact from "./sections/Contact";
 
 export default function App() {
   return (
-    <MainLayout>
-      <Hero />
-      <About />
-      <Projects />
-      <Contact />
-    </MainLayout>
+    <LanguageProvider>
+      <MainLayout>
+        <Hero />
+        <About />
+        <Projects />
+        <Contact />
+      </MainLayout>
+    </LanguageProvider>
   );
 }

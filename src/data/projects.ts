@@ -1,20 +1,22 @@
 export const projects = [
   {
-    title: "Crypto Dashboard",
-    description:
-      "App en Angular que muestra precios y gráficas en tiempo real.",
+    id: "cryptoDashboard",
+    titleKey: "projects.cryptoDashboard.title",
+    descriptionKey: "projects.cryptoDashboard.description",
     tech: ["Angular", "TypeScript", "API REST"],
     link: "https://github.com/tuusuario/crypto-dashboard",
   },
   {
-    title: "HackTheBox Tracker",
-    description: "App para registrar walkthroughs y progresos en HTB.",
+    id: "htbTracker",
+    titleKey: "projects.htbTracker.title",
+    descriptionKey: "projects.htbTracker.description",
     tech: ["React", "Tailwind", "Firebase"],
     link: "https://github.com/tuusuario/htb-tracker",
   },
   {
-    title: "Portfolio",
-    description: "Tu página personal, hecha en React + Tailwind.",
+    id: "portfolio",
+    titleKey: "projects.portfolio.title",
+    descriptionKey: "projects.portfolio.description",
     tech: ["React", "Vite", "TailwindCSS"],
     link: "https://github.com/tuusuario/portfolio",
   },

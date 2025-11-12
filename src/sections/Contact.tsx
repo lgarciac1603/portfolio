@@ -1,7 +1,10 @@
 import { motion } from "framer-motion";
 import { socialLinks } from "../data/socials";
+import { useLanguage } from "../hooks/useLanguage";
 
 export default function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section id="contact" className="py-20 bg-neutral-900 text-gray-100">
       <div className="container mx-auto px-6 md:px-12 lg:px-24 text-center">
@@ -10,7 +13,7 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold mb-8">
-          Contacto
+          {t('contact.title')}
         </motion.h2>
 
         <motion.p
@@ -18,9 +21,7 @@ export default function Contact() {
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
           className="text-lg max-w-2xl mx-auto mb-10 text-gray-400">
-          Si te interesa colaborar, discutir ideas o simplemente intercambiar
-          conocimiento sobre desarrollo, seguridad o filosofía, puedes
-          contactarme a través de mis redes o correo.
+          {t('contact.description')}
         </motion.p>
 
         <div className="flex justify-center gap-8 mt-8">
