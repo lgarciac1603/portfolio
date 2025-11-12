@@ -7,9 +7,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative flex flex-col justify-center items-center text-center px-6 min-h-screen overflow-hidden bg-black"
-    >
-      {/* Fondo animado */}
+      className="relative flex flex-col justify-center items-center text-center px-6 min-h-screen overflow-hidden bg-black">
       <HackerBackground
         color="#22d3ee"
         fontSize={18}
@@ -17,12 +15,10 @@ export default function Hero() {
         className="absolute inset-0 opacity-60"
       />
 
-      {/* Contenido principal */}
       <div className="relative z-10 flex flex-col items-center justify-center">
         <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-100 leading-tight">
-          {t("hero.greeting")}{" "}
-          <span className="text-indigo-400">Fernando</span>,{" "}
-          {t("hero.alsoKnown")}{" "}
+          {t("hero.greeting")} <span className="text-indigo-400">Fernando</span>
+          , {t("hero.alsoKnown")}{" "}
           <span className="text-indigo-400">Incuerd0</span>
         </h1>
 
@@ -32,13 +28,11 @@ export default function Hero() {
 
         <a
           href="#projects"
-          className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg transition-all shadow-lg shadow-indigo-500/30"
-        >
+          className="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-3 rounded-lg transition-all shadow-lg shadow-indigo-500/30">
           {t("hero.viewProjects")}
         </a>
       </div>
 
-      {/* Gradiente inferior */}
       <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black to-transparent"></div>
     </section>
   );
