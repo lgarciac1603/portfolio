@@ -147,7 +147,7 @@ const esTranslations: Translations = {
     "Tu información se mantiene privada. El correo se muestra solo bajo interacción para evitar scrapers automatizados.",
   // Skills Categories
   "skills.title": "Habilidades",
-  "skills.languages": "Lenguajes",
+  "skills.languages": "Lenguajes & Frameworks",
   "skills.frontend": "Frameworks & Frontend",
   "skills.backend": "Backend & APIs",
   "skills.cloud": "Cloud & DevOps",
@@ -240,7 +240,7 @@ const enTranslations: Translations = {
 
   // Skills Categories
   "skills.title": "Skills",
-  "skills.languages": "Languages",
+  "skills.languages": "Languages & Frameworks",
   "skills.frontend": "Frameworks & Frontend",
   "skills.backend": "Backend & APIs",
   "skills.cloud": "Cloud & DevOps",
