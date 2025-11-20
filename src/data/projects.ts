@@ -11,7 +11,7 @@ export const projects = [
     titleKey: "projects.htbTracker.title",
     descriptionKey: "projects.htbTracker.description",
     tech: ["React", "Tailwind", "Firebase"],
-    link: "#",
+    link: "https://lgarciac1603.github.io/htb-tracker/",
   },
   {
     id: "portfolio",
