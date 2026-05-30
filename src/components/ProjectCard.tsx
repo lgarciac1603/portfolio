@@ -5,14 +5,16 @@ interface ProjectProps {
   titleKey: string;
   descriptionKey: string;
   tech: string[];
-  link: string;
+  linkPage: string;
+  linkCode: string;
 }
 
 export default function ProjectCard({
   titleKey,
   descriptionKey,
   tech,
-  link,
+  linkPage,
+  linkCode,
 }: ProjectProps) {
   const { t } = useLanguage();
 
@@ -30,11 +32,11 @@ export default function ProjectCard({
         ))}
       </div>
       <a
-        href={link}
+        href={linkCode}
         target="_blank"
         rel="noopener noreferrer"
         className="text-indigo-400 text-sm hover:underline">
-        {t("projects.viewGithub")}
+        {t("projects.details")}
       </a>
     </div>
   );

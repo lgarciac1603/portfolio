@@ -42,9 +42,11 @@ type TranslationKey =
   | "about.badgesNote"
   | "about.badgesDescription"
   | "about.badgesTitle"
+  | "projects.details"
   | "projects.title"
   | "projects.featured"
   | "projects.viewGithub"
+  | "projects.viewGithubCode"
   | "projects.cryptoDashboard.title"
   | "projects.cryptoDashboard.description"
   | "projects.htbTracker.title"
@@ -124,9 +126,11 @@ const esTranslations: Translations = {
     "Los badges son públicos y se usan aquí como muestra de actividad en plataformas de CTF y aprendizaje.",
 
   // Projects Section
+  "projects.details": "Detalles",
   "projects.title": "Proyectos",
   "projects.featured": "Proyectos destacados",
-  "projects.viewGithub": "Ver en GitHub →",
+  "projects.viewGithub": "Ver en GitHub Pages →",
+  "projects.viewGithubCode": "Ver código en GitHub →",
   "projects.cryptoDashboard.title": "Crypto Dashboard",
   "projects.cryptoDashboard.description":
     "App en Angular que muestra precios y gráficas en tiempo real.",
@@ -216,9 +220,11 @@ const enTranslations: Translations = {
     "Badges are public and are used here as a demonstration of activity on CTF and learning platforms.",
 
   // Projects Section
+  "projects.details": "Details",
   "projects.title": "Projects",
   "projects.featured": "Featured Projects",
-  "projects.viewGithub": "View on GitHub →",
+  "projects.viewGithub": "View on GitHub Pages →",
+  "projects.viewGithubCode": "View code on GitHub →",
   "projects.cryptoDashboard.title": "Crypto Dashboard",
   "projects.cryptoDashboard.description":
     "Angular app that displays real-time prices and charts.",
@@ -268,7 +274,7 @@ const translations = {
 
 // Crear el Context
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 // Provider Component
@@ -301,7 +307,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     const translation = translations[language][key as TranslationKey];
     if (!translation) {
       console.warn(
-        `Translation missing for key: ${key} in language: ${language}`
+        `Translation missing for key: ${key} in language: ${language}`,
       );
       return key;
     }
