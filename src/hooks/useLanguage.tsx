@@ -43,6 +43,7 @@ type TranslationKey =
   | "about.badgesDescription"
   | "about.badgesTitle"
   | "projects.details"
+  | "projects.goBack"
   | "projects.title"
   | "projects.featured"
   | "projects.viewGithub"
@@ -53,6 +54,7 @@ type TranslationKey =
   | "projects.htbTracker.description"
   | "projects.portfolio.title"
   | "projects.portfolio.description"
+  | "projects.projectNotFound"
   | "contact.title"
   | "contact.subtitle"
   | "contact.description"
@@ -127,6 +129,7 @@ const esTranslations: Translations = {
 
   // Projects Section
   "projects.details": "Detalles",
+  "projects.goBack": "Regresar",
   "projects.title": "Proyectos",
   "projects.featured": "Proyectos destacados",
   "projects.viewGithub": "Ver en GitHub Pages →",
@@ -140,6 +143,7 @@ const esTranslations: Translations = {
   "projects.portfolio.title": "Portfolio",
   "projects.portfolio.description":
     "Tu página personal, hecha en React + Tailwind.",
+  "projects.projectNotFound": "Proyecto no encontrado",
 
   // Contact Section
   "contact.title": "Contacto",
@@ -221,6 +225,7 @@ const enTranslations: Translations = {
 
   // Projects Section
   "projects.details": "Details",
+  "projects.goBack": "Go back",
   "projects.title": "Projects",
   "projects.featured": "Featured Projects",
   "projects.viewGithub": "View on GitHub Pages →",
@@ -234,6 +239,7 @@ const enTranslations: Translations = {
   "projects.portfolio.title": "Portfolio",
   "projects.portfolio.description":
     "Your personal website, built with React + Tailwind.",
+  "projects.projectNotFound": "Project not found",
 
   // Contact Section
   "contact.title": "Contact",

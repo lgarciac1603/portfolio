@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useLanguage } from "../hooks/useLanguage";
 
 interface ProjectProps {
@@ -10,18 +11,19 @@ interface ProjectProps {
 }
 
 export default function ProjectCard({
+  id,
   titleKey,
   descriptionKey,
   tech,
-  linkPage,
-  linkCode,
 }: ProjectProps) {
   const { t } = useLanguage();
 
   return (
     <div className="border border-neutral-800 rounded-xl p-6 hover:border-indigo-500 transition-colors">
       <h3 className="text-xl font-semibold mb-2">{t(titleKey)}</h3>
+
       <p className="text-neutral-400 text-sm mb-4">{t(descriptionKey)}</p>
+
       <div className="flex flex-wrap gap-2 mb-4">
         {tech.map((t) => (
           <span
@@ -31,13 +33,12 @@ export default function ProjectCard({
           </span>
         ))}
       </div>
-      <a
-        href={linkCode}
-        target="_blank"
-        rel="noopener noreferrer"
+
+      <Link
+        to={`/projects/${id}`}
         className="text-indigo-400 text-sm hover:underline">
         {t("projects.details")}
-      </a>
+      </Link>
     </div>
   );
 }
