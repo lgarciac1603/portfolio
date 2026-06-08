@@ -1,11 +1,8 @@
 import Navbar from "../components/Navbar";
 import { useLanguage } from "../hooks/useLanguage";
+import type { ChildrenNodeProp } from "../lib/interfaces";
 
-interface Props {
-  children: React.ReactNode;
-}
-
-export default function MainLayout({ children }: Props) {
+export default function MainLayout({ children }: ChildrenNodeProp) {
   const { t } = useLanguage();
 
   return (

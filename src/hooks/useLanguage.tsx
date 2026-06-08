@@ -1,15 +1,8 @@
 import { useState, useEffect, createContext, useContext } from "react";
-import type { ReactNode } from "react";
+import type { LanguageContextType, ChildrenNodeProp } from "../lib/interfaces";
 
 export type Language = "es" | "en";
 
-interface LanguageContextType {
-  language: Language;
-  toggleLanguage: () => void;
-  t: (key: string) => string;
-}
-
-// Definir traducciones con tipado más estricto
 type TranslationKey =
   | "nav.about"
   | "nav.projects"
@@ -55,6 +48,13 @@ type TranslationKey =
   | "projects.portfolio.title"
   | "projects.portfolio.description"
   | "projects.projectNotFound"
+  | "projects.caseStudy.overview"
+  | "projects.caseStudy.highlights"
+  | "projects.caseStudy.architecture"
+  | "projects.caseStudy.challenges"
+  | "projects.caseStudy.learnings"
+  | "projects.caseStudy.liveDemo"
+  | "projects.caseStudy.sourceCode"
   | "contact.title"
   | "contact.subtitle"
   | "contact.description"
@@ -134,7 +134,7 @@ const esTranslations: Translations = {
   "projects.featured": "Proyectos destacados",
   "projects.viewGithub": "Ver en GitHub Pages →",
   "projects.viewGithubCode": "Ver código en GitHub →",
-  "projects.cryptoDashboard.title": "Crypto Dashboard",
+  "projects.cryptoDashboard.title": "Crypto-Dashboard",
   "projects.cryptoDashboard.description":
     "App en Angular que muestra precios y gráficas en tiempo real.",
   "projects.htbTracker.title": "HackTheBox Tracker",
@@ -144,6 +144,13 @@ const esTranslations: Translations = {
   "projects.portfolio.description":
     "Tu página personal, hecha en React + Tailwind.",
   "projects.projectNotFound": "Proyecto no encontrado",
+  "projects.caseStudy.overview": "Resumen",
+  "projects.caseStudy.highlights": "Aspectos técnicos",
+  "projects.caseStudy.architecture": "Arquitectura",
+  "projects.caseStudy.challenges": "Desafíos",
+  "projects.caseStudy.learnings": "Aprendizajes",
+  "projects.caseStudy.liveDemo": "Ver en vivo →",
+  "projects.caseStudy.sourceCode": "Ver código →",
 
   // Contact Section
   "contact.title": "Contacto",
@@ -240,6 +247,13 @@ const enTranslations: Translations = {
   "projects.portfolio.description":
     "Your personal website, built with React + Tailwind.",
   "projects.projectNotFound": "Project not found",
+  "projects.caseStudy.overview": "Overview",
+  "projects.caseStudy.highlights": "Technical Highlights",
+  "projects.caseStudy.architecture": "Architecture",
+  "projects.caseStudy.challenges": "Challenges",
+  "projects.caseStudy.learnings": "Learnings",
+  "projects.caseStudy.liveDemo": "Live demo →",
+  "projects.caseStudy.sourceCode": "View code →",
 
   // Contact Section
   "contact.title": "Contact",
@@ -283,12 +297,7 @@ const LanguageContext = createContext<LanguageContextType | undefined>(
   undefined,
 );
 
-// Provider Component
-interface LanguageProviderProps {
-  children: ReactNode;
-}
-
-export function LanguageProvider({ children }: LanguageProviderProps) {
+export function LanguageProvider({ children }: ChildrenNodeProp) {
   const [language, setLanguage] = useState<Language>(() => {
     // Intentar obtener el idioma del localStorage, sino usar 'es' por defecto
     const saved = localStorage.getItem("portfolio-language") as Language;

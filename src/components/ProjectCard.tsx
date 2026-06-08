@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLanguage } from "../hooks/useLanguage";
-
-interface ProjectProps {
-  id: string;
-  titleKey: string;
-  descriptionKey: string;
-  tech: string[];
-  linkPage: string;
-  linkCode: string;
-}
+import type { ProjectProps } from "../lib/interfaces";
 
 export default function ProjectCard({
   id,

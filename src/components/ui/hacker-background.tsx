@@ -1,11 +1,5 @@
 import React, { useEffect, useRef } from "react";
-
-interface HackerBackgroundProps {
-  color?: string;
-  fontSize?: number;
-  className?: string;
-  speed?: number;
-}
+import type { HackerBackgroundProps } from "../../lib/interfaces";
 
 export const HackerBackground: React.FC<HackerBackgroundProps> = ({
   color = "#0F0",
