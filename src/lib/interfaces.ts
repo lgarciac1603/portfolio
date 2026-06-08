@@ -12,9 +12,10 @@ export interface ProjectProps {
   image?: string;
   featured?: boolean;
   tech: string[];
-  linkPage: string;
+  linkPage?: string;
   linkCode: string;
   showCaseStudy: boolean;
+  visible?: boolean;
 }
 
 export interface LanguageContextType {

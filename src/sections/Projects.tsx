@@ -11,7 +11,7 @@ export default function Projects() {
         {t("projects.featured")}
       </h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((p) => (
+        {projects.filter((p) => p.visible !== false).map((p) => (
           <ProjectCard key={p.id} {...p} />
         ))}
       </div>

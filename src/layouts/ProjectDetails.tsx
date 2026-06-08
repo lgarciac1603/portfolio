@@ -189,7 +189,7 @@ export default function ProjectDetails() {
 
           {/* Links */}
           <div className="flex flex-wrap gap-3">
-            {id !== "portfolio" && (
+            {project.linkPage && (
               <a
                 href={project.linkPage}
                 target="_blank"
@@ -264,17 +264,19 @@ export default function ProjectDetails() {
               </div>
             </motion.div>
 
-            {/* Architecture */}
-            <motion.div
-              custom={3}
-              variants={fadeUp}
-              initial="hidden"
-              animate="visible"
-              className="mb-12"
-            >
-              <SectionTitle>{t("projects.caseStudy.architecture")}</SectionTitle>
-              {id === "cryptoDashboard" && <ArchitectureDiagram lang={lang} />}
-            </motion.div>
+            {/* Architecture — only for projects with a known diagram */}
+            {id === "cryptoDashboard" && (
+              <motion.div
+                custom={3}
+                variants={fadeUp}
+                initial="hidden"
+                animate="visible"
+                className="mb-12"
+              >
+                <SectionTitle>{t("projects.caseStudy.architecture")}</SectionTitle>
+                <ArchitectureDiagram lang={lang} />
+              </motion.div>
+            )}
 
             {/* Challenges */}
             <motion.div

@@ -47,6 +47,12 @@ type TranslationKey =
   | "projects.htbTracker.description"
   | "projects.portfolio.title"
   | "projects.portfolio.description"
+  | "projects.cppRestApi.title"
+  | "projects.cppRestApi.description"
+  | "projects.favoritesApi.title"
+  | "projects.favoritesApi.description"
+  | "projects.cacheProxyApi.title"
+  | "projects.cacheProxyApi.description"
   | "projects.projectNotFound"
   | "projects.caseStudy.overview"
   | "projects.caseStudy.highlights"
@@ -143,6 +149,15 @@ const esTranslations: Translations = {
   "projects.portfolio.title": "Portfolio",
   "projects.portfolio.description":
     "Tu página personal, hecha en React + Tailwind.",
+  "projects.cppRestApi.title": "C++ REST API",
+  "projects.cppRestApi.description":
+    "API REST en C++ para autenticación JWT y gestión de sesiones. Backend de Crypto-Dashboard.",
+  "projects.favoritesApi.title": "Favorites API",
+  "projects.favoritesApi.description":
+    "Microservicio en Go para gestión de favoritos de usuario. Backend de Crypto-Dashboard.",
+  "projects.cacheProxyApi.title": "Cache Proxy API",
+  "projects.cacheProxyApi.description":
+    "Proxy de caché en Rust sobre Redis. Intermediario entre el frontend y CoinGecko API.",
   "projects.projectNotFound": "Proyecto no encontrado",
   "projects.caseStudy.overview": "Resumen",
   "projects.caseStudy.highlights": "Aspectos técnicos",
@@ -246,6 +261,15 @@ const enTranslations: Translations = {
   "projects.portfolio.title": "Portfolio",
   "projects.portfolio.description":
     "Your personal website, built with React + Tailwind.",
+  "projects.cppRestApi.title": "C++ REST API",
+  "projects.cppRestApi.description":
+    "C++ REST API for JWT authentication and session management. Crypto-Dashboard backend.",
+  "projects.favoritesApi.title": "Favorites API",
+  "projects.favoritesApi.description":
+    "Go microservice for user favorites management. Crypto-Dashboard backend.",
+  "projects.cacheProxyApi.title": "Cache Proxy API",
+  "projects.cacheProxyApi.description":
+    "Rust cache proxy over Redis. Intermediary between the frontend and CoinGecko API.",
   "projects.projectNotFound": "Project not found",
   "projects.caseStudy.overview": "Overview",
   "projects.caseStudy.highlights": "Technical Highlights",

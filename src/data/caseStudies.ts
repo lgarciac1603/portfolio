@@ -107,4 +107,69 @@ export const caseStudies: CaseStudyData[] = [
       },
     ],
   },
+  {
+    projectId: "portfolio",
+    overview: {
+      es: "Portfolio personal construido con React 19, React Router v7 y TailwindCSS. Incluye un sistema de i18n propio sin dependencias externas, animaciones con Framer Motion y case studies técnicos por proyecto. Desplegado en GitHub Pages con routing SPA configurado mediante basename y un 404.html de redirección.",
+      en: "Personal portfolio built with React 19, React Router v7 and TailwindCSS. Includes a custom i18n system with no external dependencies, Framer Motion animations and per-project technical case studies. Deployed to GitHub Pages with SPA routing configured via basename and a 404.html redirect.",
+    },
+    highlights: [
+      {
+        icon: "🌐",
+        title: { es: "i18n propio sin dependencias", en: "Custom i18n, no dependencies" },
+        desc: {
+          es: "Context API + localStorage para ES/EN. Claves tipadas con TypeScript para detectar traducciones faltantes en tiempo de compilación.",
+          en: "Context API + localStorage for ES/EN. TypeScript-typed keys to catch missing translations at compile time.",
+        },
+      },
+      {
+        icon: "📋",
+        title: { es: "Case studies extensibles", en: "Extensible case studies" },
+        desc: {
+          es: "Datos en `caseStudies.ts` con objetos bilingüe `{ es, en }`. Añadir un proyecto nuevo es solo añadir un objeto al array.",
+          en: "Data in `caseStudies.ts` with bilingual `{ es, en }` objects. Adding a new project is just adding an object to the array.",
+        },
+      },
+      {
+        icon: "✨",
+        title: { es: "Stagger con Framer Motion", en: "Framer Motion stagger" },
+        desc: {
+          es: "Variantes `custom` para stagger controlado por índice. Animaciones de entrada suaves sin CSS manual.",
+          en: "`custom` variants for index-controlled stagger. Smooth entrance animations without manual CSS.",
+        },
+      },
+      {
+        icon: "🚀",
+        title: { es: "GitHub Pages + SPA routing", en: "GitHub Pages + SPA routing" },
+        desc: {
+          es: "basename='/portfolio' en BrowserRouter + redirect desde 404.html para que las rutas directas no devuelvan un 404 real.",
+          en: "basename='/portfolio' in BrowserRouter + redirect from 404.html so direct URL navigation doesn't return a real 404.",
+        },
+      },
+    ],
+    challenges: [
+      {
+        es: "Diseñar un sistema i18n sin librerías externas que fuera type-safe: la solución fue tipar el union de claves en TypeScript mientras `t()` acepta `string` en runtime para mantener flexibilidad.",
+        en: "Designing a type-safe i18n system without external libraries: the solution was typing the key union in TypeScript while keeping `t()` accepting `string` at runtime for flexibility.",
+      },
+      {
+        es: "Estructurar los datos del case study para ser reutilizables entre proyectos sin hardcodear contenido en el componente, manteniendo soporte bilingüe.",
+        en: "Structuring case study data to be reusable across projects without hardcoding content in the component, while maintaining bilingual support.",
+      },
+    ],
+    learnings: [
+      {
+        es: "Context API es suficiente para i18n simple: evita la complejidad de i18next cuando el alcance y el número de idiomas son reducidos.",
+        en: "Context API is enough for simple i18n: avoids i18next complexity when the scope and number of languages are small.",
+      },
+      {
+        es: "Framer Motion `custom` variants permiten stagger controlado por índice sin lógica JavaScript extra en el componente.",
+        en: "Framer Motion `custom` variants allow index-controlled stagger without extra JavaScript logic in the component.",
+      },
+      {
+        es: "GitHub Pages con React Router requiere configurar tanto el basename como el 404.html para que el refresco directo en rutas anidadas no rompa la navegación.",
+        en: "GitHub Pages with React Router requires configuring both the basename and 404.html so direct refresh on nested routes doesn't break navigation.",
+      },
+    ],
+  },
 ];
