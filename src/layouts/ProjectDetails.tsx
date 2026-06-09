@@ -26,8 +26,20 @@ function SectionTitle({ children }: { children: ReactNode }) {
 
 function ArchitectureDiagram({ lang }: { lang: Language }) {
   const labels = {
-    es: { frontend: "Frontend", proxy: "Proxy", backends: "Backends", storage: "Storage", external: "Externo" },
-    en: { frontend: "Frontend", proxy: "Proxy", backends: "Backends", storage: "Storage", external: "External" },
+    es: {
+      frontend: "Frontend",
+      proxy: "Proxy",
+      backends: "Backends",
+      storage: "Storage",
+      external: "Externo",
+    },
+    en: {
+      frontend: "Frontend",
+      proxy: "Proxy",
+      backends: "Backends",
+      storage: "Storage",
+      external: "External",
+    },
   };
   const l = labels[lang];
 
@@ -36,11 +48,15 @@ function ArchitectureDiagram({ lang }: { lang: Language }) {
       <div className="min-w-[520px] space-y-2 text-xs">
         {/* Frontend */}
         <div className="flex items-center gap-4">
-          <span className="w-20 text-right text-neutral-500 shrink-0">{l.frontend}</span>
+          <span className="w-20 text-right text-neutral-500 shrink-0">
+            {l.frontend}
+          </span>
           <div className="flex-1 flex justify-center">
             <div className="border border-indigo-700/50 bg-indigo-950/40 rounded-xl px-8 py-3 text-center">
               <p className="font-semibold text-indigo-300">Angular 20</p>
-              <p className="text-neutral-500 mt-0.5">NgRx · ECharts · SCSS · TypeScript</p>
+              <p className="text-neutral-500 mt-0.5">
+                NgRx · ECharts · SCSS · TypeScript
+              </p>
             </div>
           </div>
         </div>
@@ -51,11 +67,17 @@ function ArchitectureDiagram({ lang }: { lang: Language }) {
 
         {/* Nginx */}
         <div className="flex items-center gap-4">
-          <span className="w-20 text-right text-neutral-500 shrink-0">{l.proxy}</span>
+          <span className="w-20 text-right text-neutral-500 shrink-0">
+            {l.proxy}
+          </span>
           <div className="flex-1 flex justify-center">
             <div className="border border-neutral-700 bg-neutral-900 rounded-xl px-8 py-3 text-center">
-              <p className="font-semibold text-neutral-200">Nginx Reverse Proxy</p>
-              <p className="text-neutral-500 mt-0.5">/api-backend · /api-favorites · /api-cache</p>
+              <p className="font-semibold text-neutral-200">
+                Nginx Reverse Proxy
+              </p>
+              <p className="text-neutral-500 mt-0.5">
+                /api-backend · /api-favorites · /api-cache
+              </p>
             </div>
           </div>
         </div>
@@ -66,7 +88,9 @@ function ArchitectureDiagram({ lang }: { lang: Language }) {
 
         {/* Three services */}
         <div className="flex items-center gap-4">
-          <span className="w-20 text-right text-neutral-500 shrink-0">{l.backends}</span>
+          <span className="w-20 text-right text-neutral-500 shrink-0">
+            {l.backends}
+          </span>
           <div className="flex-1 grid grid-cols-3 gap-3">
             <div className="border border-orange-700/40 bg-orange-950/20 rounded-xl px-3 py-3 text-center">
               <p className="font-semibold text-orange-300">C++ REST API</p>
@@ -92,11 +116,15 @@ function ArchitectureDiagram({ lang }: { lang: Language }) {
 
         {/* Storage */}
         <div className="flex items-center gap-4">
-          <span className="w-20 text-right text-neutral-500 shrink-0">{l.storage}</span>
+          <span className="w-20 text-right text-neutral-500 shrink-0">
+            {l.storage}
+          </span>
           <div className="flex-1 grid grid-cols-3 gap-3">
             <div className="border border-neutral-700 bg-neutral-900 rounded-xl px-3 py-3 text-center col-span-2">
               <p className="font-semibold text-neutral-300">PostgreSQL</p>
-              <p className="text-neutral-500 mt-0.5">Users · Auth · Favorites · :5432</p>
+              <p className="text-neutral-500 mt-0.5">
+                Users · Auth · Favorites · :5432
+              </p>
             </div>
             <div className="border border-neutral-700 bg-neutral-900 rounded-xl px-3 py-3 text-center">
               <p className="font-semibold text-neutral-300">Redis</p>
@@ -111,7 +139,9 @@ function ArchitectureDiagram({ lang }: { lang: Language }) {
 
         {/* External */}
         <div className="flex items-center gap-4">
-          <span className="w-20 text-right text-neutral-500 shrink-0">{l.external}</span>
+          <span className="w-20 text-right text-neutral-500 shrink-0">
+            {l.external}
+          </span>
           <div className="flex-1 flex justify-end">
             <div className="border border-yellow-700/40 bg-yellow-950/20 rounded-xl px-5 py-3 text-center w-1/3">
               <p className="font-semibold text-yellow-300">CoinGecko API</p>
@@ -149,13 +179,11 @@ export default function ProjectDetails() {
           initial={{ opacity: 0, x: -16 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.3 }}
-          className="mb-10"
-        >
+          className="mb-10">
           <button
             type="button"
             onClick={() => navigate(-1)}
-            className="inline-flex items-center rounded-full border border-neutral-700 bg-neutral-900 px-4 py-2 text-sm font-medium text-neutral-200 transition hover:border-indigo-500 hover:text-indigo-300"
-          >
+            className="inline-flex items-center rounded-full border border-neutral-700 bg-neutral-900 px-4 py-2 text-sm font-medium text-neutral-200 transition hover:border-indigo-500 hover:text-indigo-300">
             ← {t("projects.goBack")}
           </button>
         </motion.div>
@@ -166,11 +194,15 @@ export default function ProjectDetails() {
           variants={fadeUp}
           initial="hidden"
           animate="visible"
-          className="mb-12"
-        >
+          className="mb-12">
           <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl mb-4">
             {t(project.titleKey)}
           </h1>
+          {project.showCaseStudy && caseStudy && (
+            <div className="inline-flex items-center rounded-full border border-indigo-500 bg-indigo-950/60 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-indigo-200 mb-4">
+              {t("projects.caseStudy.technicalChallenge")}
+            </div>
+          )}
           <p className="text-neutral-400 leading-7 text-lg mb-8 max-w-3xl">
             {t(project.descriptionKey)}
           </p>
@@ -180,8 +212,7 @@ export default function ProjectDetails() {
             {project.tech.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1.5 text-xs font-medium text-neutral-300"
-              >
+                className="rounded-full border border-neutral-800 bg-neutral-900 px-3 py-1.5 text-xs font-medium text-neutral-300">
                 {tech}
               </span>
             ))}
@@ -194,8 +225,7 @@ export default function ProjectDetails() {
                 href={project.linkPage}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500"
-              >
+                className="inline-flex rounded-full bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500">
                 {t("projects.caseStudy.liveDemo")}
               </a>
             )}
@@ -203,8 +233,7 @@ export default function ProjectDetails() {
               href={project.linkCode}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex rounded-full border border-neutral-700 px-5 py-2.5 text-sm font-semibold text-neutral-200 transition hover:border-indigo-500 hover:text-indigo-300"
-            >
+              className="inline-flex rounded-full border border-neutral-700 px-5 py-2.5 text-sm font-semibold text-neutral-200 transition hover:border-indigo-500 hover:text-indigo-300">
               {t("projects.caseStudy.sourceCode")}
             </a>
           </div>
@@ -221,8 +250,7 @@ export default function ProjectDetails() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="mb-12"
-            >
+              className="mb-12">
               <SectionTitle>{t("projects.caseStudy.overview")}</SectionTitle>
               <p className="text-neutral-400 leading-7">
                 {caseStudy.overview[lang]}
@@ -235,8 +263,7 @@ export default function ProjectDetails() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="mb-12"
-            >
+              className="mb-12">
               <SectionTitle>{t("projects.caseStudy.highlights")}</SectionTitle>
               <div className="grid sm:grid-cols-2 gap-4">
                 {caseStudy.highlights.map((h, i) => (
@@ -246,10 +273,11 @@ export default function ProjectDetails() {
                     variants={fadeUp}
                     initial="hidden"
                     animate="visible"
-                    className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-5"
-                  >
+                    className="rounded-xl border border-neutral-800 bg-neutral-900/50 p-5">
                     <div className="flex items-start gap-3">
-                      <span className="text-xl leading-none mt-0.5">{h.icon}</span>
+                      <span className="text-xl leading-none mt-0.5">
+                        {h.icon}
+                      </span>
                       <div>
                         <p className="font-semibold text-neutral-200 mb-1">
                           {h.title[lang]}
@@ -271,9 +299,10 @@ export default function ProjectDetails() {
                 variants={fadeUp}
                 initial="hidden"
                 animate="visible"
-                className="mb-12"
-              >
-                <SectionTitle>{t("projects.caseStudy.architecture")}</SectionTitle>
+                className="mb-12">
+                <SectionTitle>
+                  {t("projects.caseStudy.architecture")}
+                </SectionTitle>
                 <ArchitectureDiagram lang={lang} />
               </motion.div>
             )}
@@ -284,8 +313,7 @@ export default function ProjectDetails() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="mb-12"
-            >
+              className="mb-12">
               <SectionTitle>{t("projects.caseStudy.challenges")}</SectionTitle>
               <ul className="space-y-5">
                 {caseStudy.challenges.map((c, i) => (
@@ -305,8 +333,7 @@ export default function ProjectDetails() {
               variants={fadeUp}
               initial="hidden"
               animate="visible"
-              className="mb-12"
-            >
+              className="mb-12">
               <SectionTitle>{t("projects.caseStudy.learnings")}</SectionTitle>
               <ul className="space-y-4">
                 {caseStudy.learnings.map((item, i) => (

@@ -61,6 +61,8 @@ type TranslationKey =
   | "projects.caseStudy.learnings"
   | "projects.caseStudy.liveDemo"
   | "projects.caseStudy.sourceCode"
+  | "projects.caseStudy.available"
+  | "projects.caseStudy.technicalChallenge"
   | "contact.title"
   | "contact.subtitle"
   | "contact.description"
@@ -148,7 +150,7 @@ const esTranslations: Translations = {
     "App para registrar walkthroughs y progresos en HTB.",
   "projects.portfolio.title": "Portfolio",
   "projects.portfolio.description":
-    "Tu página personal, hecha en React + Tailwind.",
+    "Página personal, hecha en React + Tailwind.",
   "projects.cppRestApi.title": "C++ REST API",
   "projects.cppRestApi.description":
     "API REST en C++ para autenticación JWT y gestión de sesiones. Backend de Crypto-Dashboard.",
@@ -166,6 +168,8 @@ const esTranslations: Translations = {
   "projects.caseStudy.learnings": "Aprendizajes",
   "projects.caseStudy.liveDemo": "Ver en vivo →",
   "projects.caseStudy.sourceCode": "Ver código →",
+  "projects.caseStudy.available": "Case study",
+  "projects.caseStudy.technicalChallenge": "Desafío técnico",
 
   // Contact Section
   "contact.title": "Contacto",
@@ -260,7 +264,7 @@ const enTranslations: Translations = {
     "App to track walkthroughs and progress in HTB.",
   "projects.portfolio.title": "Portfolio",
   "projects.portfolio.description":
-    "Your personal website, built with React + Tailwind.",
+    "My personal website, built with React + Tailwind.",
   "projects.cppRestApi.title": "C++ REST API",
   "projects.cppRestApi.description":
     "C++ REST API for JWT authentication and session management. Crypto-Dashboard backend.",
@@ -278,6 +282,8 @@ const enTranslations: Translations = {
   "projects.caseStudy.learnings": "Learnings",
   "projects.caseStudy.liveDemo": "Live demo →",
   "projects.caseStudy.sourceCode": "View code →",
+  "projects.caseStudy.available": "Case study",
+  "projects.caseStudy.technicalChallenge": "Technical challenge",
 
   // Contact Section
   "contact.title": "Contact",

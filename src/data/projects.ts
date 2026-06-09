@@ -3,7 +3,16 @@ export const projects = [
     id: "cryptoDashboard",
     titleKey: "projects.cryptoDashboard.title",
     descriptionKey: "projects.cryptoDashboard.description",
-    tech: ["Angular 20", "TypeScript", "NgRx", "ECharts", "C++", "Go", "Rust", "Docker"],
+    tech: [
+      "Angular 20",
+      "TypeScript",
+      "NgRx",
+      "ECharts",
+      "C++",
+      "Go",
+      "Rust",
+      "Docker",
+    ],
     linkPage: "https://lgarciac1603.github.io/crypto-dashboard/",
     linkCode: "https://github.com/lgarciac1603/crypto-dashboard",
     showCaseStudy: true,
@@ -32,7 +41,7 @@ export const projects = [
     descriptionKey: "projects.cppRestApi.description",
     tech: ["C++", "JWT", "PostgreSQL", "Docker", "REST API"],
     linkCode: "https://github.com/lgarciac1603/cpp-rest-api",
-    showCaseStudy: false,
+    showCaseStudy: true,
   },
   {
     id: "favoritesApi",
@@ -40,7 +49,7 @@ export const projects = [
     descriptionKey: "projects.favoritesApi.description",
     tech: ["Go", "REST API", "PostgreSQL", "Docker"],
     linkCode: "https://github.com/lgarciac1603/favorites-api",
-    showCaseStudy: false,
+    showCaseStudy: true,
   },
   {
     id: "cacheProxyApi",
@@ -48,6 +57,6 @@ export const projects = [
     descriptionKey: "projects.cacheProxyApi.description",
     tech: ["Rust", "Redis", "Docker", "REST API"],
     linkCode: "https://github.com/lgarciac1603/cache-proxy-api",
-    showCaseStudy: false,
+    showCaseStudy: true,
   },
 ];

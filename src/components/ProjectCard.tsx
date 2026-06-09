@@ -7,12 +7,20 @@ export default function ProjectCard({
   titleKey,
   descriptionKey,
   tech,
+  showCaseStudy,
 }: ProjectProps) {
   const { t } = useLanguage();
 
   return (
     <div className="border border-neutral-800 rounded-xl p-6 hover:border-indigo-500 transition-colors">
-      <h3 className="text-xl font-semibold mb-2">{t(titleKey)}</h3>
+      <div className="flex items-center justify-between gap-3 mb-3">
+        <h3 className="text-xl font-semibold">{t(titleKey)}</h3>
+        {showCaseStudy && (
+          <span className="rounded-full bg-indigo-950/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-indigo-300">
+            {t("projects.caseStudy.available")}
+          </span>
+        )}
+      </div>
 
       <p className="text-neutral-400 text-sm mb-4">{t(descriptionKey)}</p>
 
